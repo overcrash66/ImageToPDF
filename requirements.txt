@@ -1,0 +1,5 @@
+PySide6
+PyPdf2
+Pillow-PIL
+easygui
+pdf2image
