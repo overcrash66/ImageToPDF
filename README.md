@@ -16,9 +16,7 @@ Tested on windows 10 + 11 using python 3.6+
 
 # Install:
 
-``https://blog.alivate.com.au/poppler-windows/``
-
-``Download "Latest binary : poppler-0.68.0_x86"``
+``Download "Latest binary : poppler-0.68.0_x86"`` https://blog.alivate.com.au/poppler-windows/
 
 ``Add poppler to env path``
 
