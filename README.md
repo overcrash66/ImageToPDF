@@ -11,7 +11,16 @@ Tested on windows 10 + 11 using python 3.6+
 
 ![Screenshot](Screenshot.png)
 
+
+[Binary available here](https://github.com/overcrash66/ImageToPDF/releases/download/v0.2/ImageToPdf.zip)
+
 # Install:
+
+``https://blog.alivate.com.au/poppler-windows/``
+
+``Download "Latest binary : poppler-0.68.0_x86"``
+
+``Add poppler to env path``
 
 ``pip install -r requirements.txt``
 
@@ -20,7 +29,6 @@ Tested on windows 10 + 11 using python 3.6+
 
 # Options:
 
-Python_Lib.exe/py convert PDF to image
 Python_Lib.exe/py can be used as standalone or from ImageToPDF.exe/py
 
-### FYI: 	No new updates will be provided.  
+### FYI: (ugly code but it works as it works don't touch it) No new updates will be provided (maybe).  
