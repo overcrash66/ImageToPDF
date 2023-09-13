@@ -28,5 +28,3 @@ Tested on windows 10 + 11 using python 3.6+
 # Options:
 
 Python_Lib.exe/py can be used as standalone or from ImageToPDF.exe/py
-
-### FYI: (ugly code but it works as it works don't touch it) No new updates will be provided (maybe).  
