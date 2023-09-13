@@ -27,4 +27,6 @@ Tested on windows 10 + 11 using python 3.6+
 
 # Options:
 
-Python_Lib.exe/py can be used as standalone or from ImageToPDF.exe/py
+Python_Lib.exe/.py can be used as standalone or from ImageToPDF.exe/py
+To use Python_Lib (to convert PDF files to images from command line / cmd / terminal ):
+``Python_Lib.py Your_pdf_path``

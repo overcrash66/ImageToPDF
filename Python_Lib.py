@@ -19,7 +19,7 @@ def convert_to_jpeg(pdf_to_jpeg_path):
             now = datetime.now()
             dt_string = now.strftime("%d-%m-%Y_%H-%M-%S-%f")
             page.save(f"Converted-PDF-page{dt_string}.jpeg", "JPEG")
-        easygui.msgbox("PDF file converted Successfully \nAll Images available in main folder \n\n\n\n--PDF TO Image TOOL--\n--POWERED BY PYTHON--\n--Created By WAEL SAHLI--\n 2021", title="Done")    
+        easygui.msgbox("PDF file converted Successfully \nAll Images available in main folder \n\n\n\n--PDF TO Image TOOL--\n--POWERED BY PYTHON--\n-- Created By WAEL SAHLI--\n Last update was 09-13-2023", title="Done")    
     except Exception as e:
         easygui.msgbox(f"Sorry An Error Occured !\n{str(e)}", title="Error")
 

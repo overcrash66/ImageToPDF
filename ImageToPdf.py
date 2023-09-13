@@ -57,7 +57,7 @@ class JpegToPdf(QMainWindow):
 		self.button_open_dir.clicked.connect(self.clearAllSelection)
 		self.button_start.clicked.connect(self.convertImagesToPdf)
 		self.button_image_to_pdf.clicked.connect(self.convertImagesToPdf)
-
+		
 	def createButton(self, text):
 		button = QPushButton(text)
 		button.setFont(QFont('Times', 10, weight=QFont.Bold))
@@ -83,15 +83,14 @@ class JpegToPdf(QMainWindow):
 				button.setStyleSheet('QPushButton {background-color: #B2D17C; color: black;}')
 				self.updateButtonState()
 		else:
-			# Handle the case where the button text cannot be converted to an integer
-			# This could occur if the button text does not follow the "Image N" pattern
-			#QMessageBox.warning(self, "Warning", "Invalid button clicked. Please use 'Image N' buttons.")
 			pass
 
 	def updateButtonState(self):
 		enabled = any(self.image_paths)
 		self.button_start.setEnabled(enabled)
 		self.button_open_dir.setEnabled(enabled)
+		#self.button_image_to_pdf.setEnabled(enabled)
+
 
 	def clearAllSelection(self):
 		self.image_paths = [""] * 12
@@ -120,7 +119,15 @@ class JpegToPdf(QMainWindow):
 				for image_path in selected_images:
 					image = Image.open(image_path)
 					image = image.convert('RGB')
-					pdf_path = os.path.splitext(image_path)[0] + ".pdf"
+					base_pdf_name = os.path.splitext(os.path.basename(image_path))[0]
+					pdf_path = base_pdf_name + ".pdf"
+
+					# Check if the PDF file with the same name exists
+					counter = 1
+					while os.path.exists(pdf_path):
+						pdf_path = f"{base_pdf_name}_{counter}.pdf"
+						counter += 1
+
 					image.save(pdf_path)
 					pdf_paths.append(pdf_path)
 
@@ -138,7 +145,7 @@ class JpegToPdf(QMainWindow):
 					os.remove(pdf_path)
 
 				self.updateButtonState()
-				QMessageBox.information(self, "Info", "Images converted to PDF successfully.")
+				QMessageBox.information(self, "Info", "Images converted to PDF successfully.\nAll Images are available in main folder \n\n\n\n--Image2PDF TOOL--\n--POWERED BY PYTHON--\n-- Created By WAEL SAHLI--\n Last update was 09-13-2023")
 			except Exception as e:
 				self.error(str(e))
 		else:
