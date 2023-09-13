@@ -7,12 +7,12 @@ Creeated using PySide6 + PyPDF2 + Poppler
 
 Binary build using Pyinstaller
 
-Tested on windows 10 + 11 using python 3.6+
+Tested on windows 10 + 11 using python >=3.6
 
 ![Screenshot](Screenshot.png)
 
 
-[Binary available here](https://github.com/overcrash66/ImageToPDF/releases/download/v0.2/ImageToPdf.zip)
+[Old V0.1 Binary available here](https://github.com/overcrash66/ImageToPDF/releases/download/v0.2/ImageToPdf.zip)
 
 # Install:
 
