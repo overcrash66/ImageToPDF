@@ -23,6 +23,12 @@ A lightweight GUI application for converting images to PDF and PDF files to imag
 
 ## Installation
 
+```bash
+pip install imagetopdf-gui==2.0.0
+```
+
+### Or manually:
+
 ### 1. Install Python Dependencies
 
 ```bash
