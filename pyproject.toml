@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imagetopdf-gui"
+version = "2.0.0"
+authors = [
+    { name = "WAEL SAHLI" }
+]
+description = "A lightweight GUI application for converting images to PDF and PDF files to images"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Office/Business",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+keywords = ["pdf", "image", "converter", "gui", "pyside6"]
+dependencies = [
+    "PySide6>=6.5.0",
+    "PyPDF2>=3.0.0",
+    "Pillow>=10.0.0",
+    "pymupdf>=1.23.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/overcrash66/ImageToPDF"
+"Bug Tracker" = "https://github.com/overcrash66/ImageToPDF/issues"
+"Source" = "https://github.com/overcrash66/ImageToPDF"
+
+[project.scripts]
+imagetopdf = "imagetopdf.app:main"
+pdf-to-jpeg = "imagetopdf.cli:main"
+
+[project.gui-scripts]
+imagetopdf-gui = "imagetopdf.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["imagetopdf*"]
+exclude = ["tests*"]

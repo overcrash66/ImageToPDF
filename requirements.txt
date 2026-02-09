@@ -1,5 +1,14 @@
-PySide6
-PyPdf2
-Pillow-PIL
-easygui
-pdf2image
+# ImageToPDF Requirements
+# Python 3.6+
+
+# GUI Framework
+PySide6>=6.5.0
+
+# PDF Processing
+PyPDF2>=3.0.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# PDF to Image
+pymupdf>=1.23.0
